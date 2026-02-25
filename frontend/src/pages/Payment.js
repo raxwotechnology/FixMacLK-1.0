@@ -76,7 +76,7 @@ const Payment = ({ darkMode }) => {
         return;
       }
 
-      const response = await axios.get('https://fixmymaclk-yzgm.onrender.com/api/products', {
+      const response = await axios.get('https://fixmymaclk-33hy.onrender.com/api/products', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
