@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/SupplierAdd.css";
 
-const API_URL = "https://fixmymaclk-33hy.onrender.com/api/suppliers";
+const API_URL = "https://fixmaclk-1-0.onrender.com/api/suppliers";
 
 const AddSupplier = ({ supplier, closeModal, darkMode, refreshSuppliers }) => {
   const [formData, setFormData] = useState({

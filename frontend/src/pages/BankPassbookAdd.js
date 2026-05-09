@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import "../styles/BankPassbookAdd.css";
 
-const API_URL = "https://fixmymaclk-33hy.onrender.com/api/bank-passbook";
+const API_URL = "https://fixmaclk-1-0.onrender.com/api/bank-passbook";
 
 const getCurrentDate = () => new Date().toISOString().split("T")[0];
 const getCurrentTime = () => new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });

@@ -3,7 +3,7 @@ import '../styles/Products.css';
 import { useNavigate, Link } from 'react-router-dom';
 import Select from 'react-select';
 
-const API_URL = 'https://fixmymaclk-33hy.onrender.com/api/suppliers';
+const API_URL = 'https://fixmaclk-1-0.onrender.com/api/suppliers';
 
 const CartForm = ({ supplier, closeModal, darkMode, refreshProducts }) => {
   const [items, setItems] = useState([{

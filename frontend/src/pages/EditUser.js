@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../styles/EditUser.css';
 
-const API_URL = 'https://fixmymaclk-33hy.onrender.com/api/auth/users';
+const API_URL = 'https://fixmaclk-1-0.onrender.com/api/auth/users';
 
 const EditUser = ({ user, closeModal,darkMode }) => {
   const [formData, setFormData] = useState(user);

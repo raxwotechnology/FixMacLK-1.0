@@ -7,7 +7,7 @@ import "../styles/StockUpdateList.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faFile, faSearch, faFileExcel, faFilePdf, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
-const API_URL = "https://fixmymaclk-33hy.onrender.com/api/products";
+const API_URL = "https://fixmaclk-1-0.onrender.com/api/products";
 
 const StockUpdateList = ({ darkMode }) => {
   const [products, setProducts] = useState([]);

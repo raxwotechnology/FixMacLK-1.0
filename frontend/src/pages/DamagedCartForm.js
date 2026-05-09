@@ -5,7 +5,7 @@ import Select from 'react-select';
 import axios from 'axios';
 import CreatableSelect from 'react-select/creatable';
 
-const PRODUCTS_API_URL = 'https://fixmymaclk-33hy.onrender.com/api/products';
+const PRODUCTS_API_URL = 'https://fixmaclk-1-0.onrender.com/api/products';
 
 const CartForm = ({ supplier, item, closeModal, darkMode, refreshProducts }) => {
   const [grn, setGrn] = useState('');
