@@ -4,10 +4,16 @@ services:
     env: node
     plan: free
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node server.js
     envVars:
       - key: NODE_ENV
         value: production
-      - key: PORT
-        value: 10000
-    healthCheckPath: / 
+      - key: MONGODB_URI
+        fromEnvVar: MONGODB_URI
+      - key: JWT_SECRET
+        fromEnvVar: JWT_SECRET
+      - key: EMAIL_USER
+        fromEnvVar: EMAIL_USER
+      - key: EMAIL_PASS
+        fromEnvVar: EMAIL_PASS
+    healthCheckPath: /

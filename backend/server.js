@@ -17,13 +17,15 @@ if (!mongoURI) {
   process.exit(1);
 }
 
-mongoose.connect(mongoURI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => console.log('✅ Connected to MongoDB'))
+mongoose.connect(mongoURI)
+  .then(() => {
+    console.log('✅ Connected to MongoDB');
+    console.log('🔗 DB Host:', mongoose.connection.host);
+  })
   .catch(err => {
-    console.error('❌ MongoDB connection error:', err);
-    process.exit(1);
+    console.error('❌ MongoDB connection error:', err.message);
+    // Don't exit immediately, let the health check fail instead
+    // process.exit(1);
   });
 
 // Test route
