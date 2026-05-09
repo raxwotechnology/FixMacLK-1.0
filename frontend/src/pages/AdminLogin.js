@@ -30,7 +30,8 @@ const AdminLogin = ({ darkMode }) => {
       setMessage('✅ Login successful! Redirecting...');
       setTimeout(() => navigate('/dashboard'), 1500);
     } catch (err) {
-      setError(err.response?.data?.message || "Login failed. Please try again.");
+      const errorMsg = err.response?.data?.msg || err.response?.data?.message || err.response?.data?.error || (err.message === 'Network Error' ? 'Network error: Cannot reach server' : 'Login failed. Please try again.');
+      setError(errorMsg);
       console.error(err.response?.data);
     } finally {
       setLoading(false);

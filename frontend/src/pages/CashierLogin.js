@@ -39,7 +39,8 @@ const UserLogin = ({ darkMode }) => {
         }
       }, 1500);
     } catch (err) {
-      setError(err.response?.data?.msg || "Login failed. Please try again.");
+      const errorMsg = err.response?.data?.msg || err.response?.data?.message || err.response?.data?.error || (err.message === 'Network Error' ? 'Network error: Cannot reach server' : 'Login failed. Please try again.');
+      setError(errorMsg);
     } finally {
       setLoading(false);
     }
