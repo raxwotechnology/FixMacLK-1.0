@@ -103,7 +103,8 @@ const UserSignup = ({ darkMode }) => {
       setMessage(`✅ ${formData.role.charAt(0).toUpperCase() + formData.role.slice(1)} registration successful!`);
       setTimeout(() => navigate('/cashier/login'), 1500);
     } catch (err) {
-      setError(err.response?.data?.msg || 'Registration failed. Please try again.');
+      const errorMsg = err.response?.data?.msg || err.response?.data?.message || err.response?.data?.error || 'Registration failed. Please try again.';
+      setError(errorMsg);
     } finally {
       setLoading(false);
     }

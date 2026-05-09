@@ -48,7 +48,11 @@ const AdminSignup = ({darkMode}) => {
         })
       });
 
-      if (!response.ok) throw new Error("Registration failed.");
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.msg || data.message || data.error || "Registration failed.");
+      }
 
       setMessage("✅ Admin registered successfully!");
       setTimeout(() => navigate("/admin/login"), 1500);
